@@ -22,7 +22,7 @@
                 android:id="@+id/input"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@{activity.text}"
+                android:text="@{activity.livetext}"
                 android:layout_weight="1"
                 android:textSize="30sp"/>
 
@@ -42,14 +42,24 @@
         </LinearLayout>
 
 
-        <Button
-            android:id="@+id/change"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="25sp"
-            android:onClick="@{activity::btnClick}"
-            android:text="변화"/>
-        
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/change1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="LiveData 출력"/>
+
+            <Button
+                android:id="@+id/change2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="DataBinding 출력"/>
+        </LinearLayout>
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
