@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityMainBinding
     val profileAdapter = ProfileAdapter()
+    val ImageUrl = "https://www.google.com/search?q=%EB%82%98%EC%9D%B4%ED%82%A4+%EB%A1%9C%EA%B3%A0&tbm=isch&source=iu&ictx=1&fir=6NXhXKRSjPsgIM%252Cfm36MWyUtzZe_M%252C_&vet=1&usg=AI4_-kRzHOl_KZqzYagZAjpFw3AIHdiIdg&sa=X&ved=2ahUKEwiPtK2JyMLyAhXWD94KHcW0BQMQ9QF6BAgJEAE#imgrc=6NXhXKRSjPsgIM"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,7 +47,7 @@ class MainActivity : AppCompatActivity() {
 
     fun btnClick(view:View){
         Toast.makeText(this,"버튼 클릭" , Toast.LENGTH_SHORT).show()
-        val data = ProfileData(binding.name.text.toString() , binding.age.text.toString().toInt())
+        val data = ProfileData(ImageUrl , binding.name.text.toString() , binding.age.text.toString().toInt())
         profileAdapter.data.add(data)
         profileAdapter.notifyDataSetChanged()
         binding.invalidateAll()
